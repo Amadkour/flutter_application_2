@@ -1,5 +1,9 @@
 class DashboardState {}
 
-class DashboardChangeBackgroundState extends DashboardState {}
+class DashboardChangeState extends DashboardState {}
 
-class DashboardInitializationState extends DashboardState {}
+// class DashboardInitializationState extends DashboardState {}
+// 
+// class DashboardLoading extends DashboardState {}
+// 
+// class DashboardLoaded extends DashboardState {}

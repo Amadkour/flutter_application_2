@@ -3,15 +3,17 @@ import 'package:flutter_application_2/features/dashboard/controller/dashboard_st
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DashboardController extends Cubit<DashboardState> {
-  DashboardController() : super(DashboardInitializationState());
-  Color backgroundColor = const Color(0xFFFFA000);
+  DashboardController() : super(DashboardChangeState());
 
-  void changeBackground() {
-    if (backgroundColor == Colors.green) {
-      backgroundColor = Colors.blue;
-    } else {
-      backgroundColor = Colors.green;
+  int selectedTapIndex = 0;
+  final PageController pageController = PageController();
+
+  void onChangeTabIndex(int index) {
+    if (index == 2) {
+      throw 'dummy exception from mobile';
     }
-    emit(DashboardChangeBackgroundState());
+    selectedTapIndex = index;
+    pageController.jumpToPage(selectedTapIndex);
+    emit(DashboardChangeState());
   }
 }

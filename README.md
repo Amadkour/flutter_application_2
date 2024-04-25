@@ -1,16 +1,48 @@
 # flutter_application_2
+lab 4 content:
 
-A new Flutter project.
+    1- Dynamic List:
+        * Listview:
+            - normal constractor
+            - builder constractor
+            - seperator constractor
+        * singleChildScrollView
+            - normal constractor
+        * gridview
+            - count constractor
 
-## Getting Started
+    2- default widget
+        * image
+    
+    3- Model for parsing data response
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    ///dart pub global activate flutterfire_cli
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    4- firebase common services
+        * Crashlatics
+        * events
+        * remote config
+        * dynamic link
+        * cloud messaging
+        * performance
+        * App Distribution
+
+    5- repo:
+       * Database (sqflite)
+       * Firebase (cloud_firestore)
+    
+    6- dashbord navigation
+
+
+
+    notes:
+    multiDexEnabled true
+
+    
+    
+
+
+
+

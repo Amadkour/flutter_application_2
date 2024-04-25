@@ -1,7 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/utils/context_extension.dart';
-import 'package:flutter_application_2/core/utils/sqlite_database.dart';
 import 'package:flutter_application_2/features/auth/registration/controller/cubit/registration_cubit.dart';
+import 'package:flutter_application_2/features/dashboard/modules/users/model/repo/local_db_data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BottomNavigationWiget extends StatelessWidget {
@@ -24,6 +26,9 @@ class BottomNavigationWiget extends StatelessWidget {
               FilledButton(
                   style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.orange)),
                   onPressed: () async {
+                    await (await DatabaseRepo.instance).insert(name: 'Ahmed', address: 'Tanta');
+
+                    log('added successfully');
                     // controller.onPressedConfirmButton(context);
                     await controller.addUser();
                   },
@@ -34,8 +39,8 @@ class BottomNavigationWiget extends StatelessWidget {
                   const Text("have an account ? "),
                   InkWell(
                     onTap: () async {
-                      print(await (await MyDatabase.instance).read());
-                      (await MyDatabase.instance).insert('name', 'address');
+                      // print(await (await DatabaseUserRepo.instance).fetch());
+                      // (await DatabaseUserRepo.instance).insert(name: 'name', address: 'address');
                     },
                     child: const Text(
                       "login",
